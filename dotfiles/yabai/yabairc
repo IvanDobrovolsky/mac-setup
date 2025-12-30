@@ -1,0 +1,26 @@
+#!/usr/bin/env sh
+
+# Bar configuration
+yabai -m config external_bar all:0:0
+yabai -m config window_border on
+yabai -m config window_border_width 2
+yabai -m config active_window_border_color 0xff8aadf4 # Catppuccin Macchiato/Mocha Blue
+yabai -m config normal_window_border_color 0xff494d64 # Catppuccin Surface
+
+# Layout
+yabai -m config layout bsp
+yabai -m config top_padding 10
+yabai -m config bottom_padding 10
+yabai -m config left_padding 10
+yabai -m config right_padding 10
+yabai -m config window_gap 10
+
+# Mouse
+yabai -m config mouse_follows_focus on
+
+# Rules
+# Exclude System Settings and other floating windows
+yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^Calculator$" manage=off
+yabai -m rule --add app="^1Password$" manage=off
+

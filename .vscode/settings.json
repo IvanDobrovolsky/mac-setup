@@ -1,0 +1,13 @@
+{
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "files.autoSave": "afterDelay",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
+    "vscode-neovim.neovimInitVimPaths.darwin": "$HOME/.config/nvim/init.lua"
+}
