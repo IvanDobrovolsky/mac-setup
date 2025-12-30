@@ -21,6 +21,14 @@ ln -sf "$DOTFILES_DIR/dotfiles/yabai/yabairc" "$CONFIG_DIR/yabai/yabairc"
 mkdir -p "$CONFIG_DIR/skhd"
 ln -sf "$DOTFILES_DIR/dotfiles/skhd/skhdrc" "$CONFIG_DIR/skhd/skhdrc"
 
+# Shell Aliases (Add to .zshrc if not present)
+if ! grep -q "source $DOTFILES_DIR/dotfiles/zshrc_extras" "$HOME/.zshrc"; then
+    echo "Adding aliases to .zshrc..."
+    echo "" >> "$HOME/.zshrc"
+    echo "# Dotfiles extras" >> "$HOME/.zshrc"
+    echo "source \"$DOTFILES_DIR/dotfiles/zshrc_extras\"" >> "$HOME/.zshrc"
+fi
+
 # 3. Setup Neovim (LazyVim)
 echo "Setting up Neovim (LazyVim)..."
 if [ -d "$CONFIG_DIR/nvim" ]; then
