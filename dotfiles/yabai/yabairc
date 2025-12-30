@@ -3,9 +3,12 @@
 # Bar configuration
 yabai -m config external_bar all:0:0
 yabai -m config window_border on
-yabai -m config window_border_width 2
-yabai -m config active_window_border_color 0xff8aadf4 # Catppuccin Macchiato/Mocha Blue
-yabai -m config normal_window_border_color 0xff494d64 # Catppuccin Surface
+yabai -m config window_border_width 4
+yabai -m config active_window_border_color 0xff89b4fa # Catppuccin Mocha Blue
+yabai -m config normal_window_border_color 0xff313244 # Catppuccin Mocha Surface0
+yabai -m config insert_feedback_color 0xffa6e3a1 # Catppuccin Mocha Green
+yabai -m config window_placement second_child
+yabai -m config window_shadow off
 
 # Layout
 yabai -m config layout bsp
