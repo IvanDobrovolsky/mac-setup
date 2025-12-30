@@ -30,6 +30,9 @@ cmd + shift - c : open -a "Cursor"
 # Cmd + Return -> Ghostty terminal
 cmd - return : open -n -a "Ghostty"
 
+# Cmd + Shift + B -> Google Chrome
+cmd + shift - b : open -a "Google Chrome"
+
 # Cmd + Shift + A -> open gemini app
 # Assuming "Gemini" is the app name, or using Chrome to open the URL as fallback if app not found.
 cmd + shift - a : open -a "Google Chrome" "https://gemini.google.com/app"
