@@ -21,6 +21,15 @@ ln -sf "$DOTFILES_DIR/dotfiles/yabai/yabairc" "$CONFIG_DIR/yabai/yabairc"
 mkdir -p "$CONFIG_DIR/skhd"
 ln -sf "$DOTFILES_DIR/dotfiles/skhd/skhdrc" "$CONFIG_DIR/skhd/skhdrc"
 
+# Ghostty
+mkdir -p "$CONFIG_DIR/ghostty"
+mkdir -p "$CONFIG_DIR/ghostty/themes"
+ln -sf "$DOTFILES_DIR/dotfiles/ghostty/config" "$CONFIG_DIR/ghostty/config"
+ln -sf "$DOTFILES_DIR/dotfiles/ghostty/themes/catppuccin-mocha" "$CONFIG_DIR/ghostty/themes/catppuccin-mocha"
+
+# Starship
+ln -sf "$DOTFILES_DIR/dotfiles/starship.toml" "$CONFIG_DIR/starship.toml"
+
 # Shell Aliases (Add to .zshrc if not present)
 if ! grep -q "source $DOTFILES_DIR/dotfiles/zshrc_extras" "$HOME/.zshrc"; then
     echo "Adding aliases to .zshrc..."

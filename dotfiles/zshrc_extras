@@ -1,2 +1,5 @@
 alias cursor="/Applications/Cursor.app/Contents/Resources/app/bin/cursor"
 
+# Initialize Starship prompt
+eval "$(starship init zsh)"
+

@@ -19,6 +19,7 @@ brew install ripgrep
 brew install fd
 brew install fzf
 brew install node # for copilot/various lsps
+brew install starship # prompt with icons
 
 # Tiling & Keybindings
 brew install yabai
@@ -28,8 +29,6 @@ brew install skhd
 brew install --cask discord
 brew install --cask whatsapp
 brew install --cask cursor
-brew install --cask 1password
-brew install --cask google-chrome # Optional but useful
 brew install --cask pdfsam-basic
 
 # Ghostty (Terminal)
