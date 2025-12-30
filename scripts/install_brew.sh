@@ -20,6 +20,8 @@ brew install fd
 brew install fzf
 brew install node # for copilot/various lsps
 brew install starship # prompt with icons
+brew install zoxide # smarter cd
+brew install eza # modern ls replacement
 
 # Tiling & Keybindings
 brew install yabai

@@ -3,3 +3,11 @@ alias cursor="/Applications/Cursor.app/Contents/Resources/app/bin/cursor"
 # Initialize Starship prompt
 eval "$(starship init zsh)"
 
+# Initialize Zoxide (smarter cd)
+eval "$(zoxide init zsh)"
+
+# Aliases
+alias ls="eza --icons --group-directories-first -l"
+alias ll="eza --icons --group-directories-first -l"
+alias la="eza --icons --group-directories-first -la"
+

@@ -28,7 +28,7 @@ cmd + shift - w : open -a "WhatsApp"
 cmd + shift - c : open -a "Cursor"
 
 # Cmd + Return -> Ghostty terminal
-cmd + return : open -a "Ghostty"
+cmd - return : open -n -a "Ghostty"
 
 # Cmd + Shift + A -> open gemini app
 # Assuming "Gemini" is the app name, or using Chrome to open the URL as fallback if app not found.
