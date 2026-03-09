@@ -22,6 +22,8 @@ brew install node # for copilot/various lsps
 brew install starship # prompt with icons
 brew install zoxide # smarter cd
 brew install eza # modern ls replacement
+brew install lazygit # terminal git UI
+brew install tmux # terminal multiplexer
 
 # Tiling & Keybindings
 brew install yabai
@@ -30,7 +32,6 @@ brew install skhd
 # Applications
 brew install --cask discord
 brew install --cask whatsapp
-brew install --cask cursor
 brew install --cask pdfsam-basic
 
 # Ghostty (Terminal)
@@ -44,6 +45,9 @@ fi
 
 # Fonts (Nerd Fonts for icons)
 brew install --cask font-jetbrains-mono-nerd-font
+
+# CLI AI Tools
+npm install -g @anthropic-ai/claude-code # Claude Code CLI
 
 # Cleanup
 brew cleanup

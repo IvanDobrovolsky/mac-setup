@@ -24,8 +24,8 @@ cmd + shift - d : open -a "Discord"
 # Cmd + Shift + W -> WhatsApp
 cmd + shift - w : open -a "WhatsApp"
 
-# Cmd + Shift + C -> Cursor
-cmd + shift - c : open -a "Cursor"
+# Cmd + Shift + C -> VS Code
+cmd + shift - c : open -a "Visual Studio Code"
 
 # Cmd + Return -> Ghostty terminal
 cmd - return : open -n -a "Ghostty"

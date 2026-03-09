@@ -46,19 +46,13 @@ if [ -d "$CONFIG_DIR/nvim" ]; then
 fi
 ln -sf "$DOTFILES_DIR/dotfiles/nvim" "$CONFIG_DIR/nvim"
 
-# 4. Setup VS Code / Cursor Settings
-echo "Setting up VS Code / Cursor settings..."
+# 4. Setup VS Code Settings
+echo "Setting up VS Code settings..."
 VSCODE_USER_DIR="$HOME/Library/Application Support/Code/User"
-CURSOR_USER_DIR="$HOME/Library/Application Support/Cursor/User"
 
 if [ -d "$VSCODE_USER_DIR" ]; then
     echo "Linking VS Code settings..."
     ln -sf "$DOTFILES_DIR/.vscode/settings.json" "$VSCODE_USER_DIR/settings.json"
-fi
-
-if [ -d "$CURSOR_USER_DIR" ]; then
-    echo "Linking Cursor settings..."
-    ln -sf "$DOTFILES_DIR/.vscode/settings.json" "$CURSOR_USER_DIR/settings.json"
 fi
 
 # 5. Service Management (Yabai/SKHD)
