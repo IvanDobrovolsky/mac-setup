@@ -10,4 +10,5 @@ alias ll="eza --icons --group-directories-first -l"
 alias la="eza --icons --group-directories-first -la"
 alias code="code ."
 alias cx="claude --dangerously-skip-permissions"
+alias twd="$HOME/my-mac-setup/scripts/twd.sh"
 

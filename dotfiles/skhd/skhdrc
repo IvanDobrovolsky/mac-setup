@@ -1,14 +1,14 @@
-# Navigation (Alt + hjkl)
-alt - h : yabai -m window --focus west
-alt - j : yabai -m window --focus south
-alt - k : yabai -m window --focus north
-alt - l : yabai -m window --focus east
+# Navigation (Alt + Arrows)
+alt - left  : yabai -m window --focus west
+alt - down  : yabai -m window --focus south
+alt - up    : yabai -m window --focus north
+alt - right : yabai -m window --focus east
 
-# Move Windows (Alt + Shift + hjkl)
-alt + shift - h : yabai -m window --warp west
-alt + shift - j : yabai -m window --warp south
-alt + shift - k : yabai -m window --warp north
-alt + shift - l : yabai -m window --warp east
+# Move Windows (Alt + Shift + Arrows)
+alt + shift - left  : yabai -m window --warp west
+alt + shift - down  : yabai -m window --warp south
+alt + shift - up    : yabai -m window --warp north
+alt + shift - right : yabai -m window --warp east
 
 # Float / Unfloat (Alt + t)
 alt - t : yabai -m window --toggle float

@@ -30,6 +30,10 @@ ln -sf "$DOTFILES_DIR/dotfiles/ghostty/themes/catppuccin-mocha" "$CONFIG_DIR/gho
 # Starship
 ln -sf "$DOTFILES_DIR/dotfiles/starship.toml" "$CONFIG_DIR/starship.toml"
 
+# Tmux
+mkdir -p "$CONFIG_DIR/tmux"
+ln -sf "$DOTFILES_DIR/dotfiles/tmux/tmux.conf" "$CONFIG_DIR/tmux/tmux.conf"
+
 # Shell Aliases (Add to .zshrc if not present)
 if ! grep -q "source $DOTFILES_DIR/dotfiles/zshrc_extras" "$HOME/.zshrc"; then
     echo "Adding aliases to .zshrc..."
