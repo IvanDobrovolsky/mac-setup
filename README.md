@@ -21,7 +21,7 @@ A minimal, opinionated macOS development environment with tiling window manageme
 ## Installation
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/my-mac-setup.git
+git clone https://github.com/IvanDobrovolsky/my-mac-setup.git
 cd my-mac-setup
 ./setup.sh
 ```
