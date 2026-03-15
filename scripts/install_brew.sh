@@ -48,6 +48,7 @@ brew install --cask font-jetbrains-mono-nerd-font
 
 # CLI AI Tools
 npm install -g @anthropic-ai/claude-code # Claude Code CLI
+brew install opencode-ai/tap/opencode # OpenCode CLI
 
 # Cleanup
 brew cleanup
