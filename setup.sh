@@ -13,13 +13,9 @@ chmod +x "$DOTFILES_DIR/scripts/install_brew.sh"
 # 2. Symlink Configs
 echo "Linking configurations..."
 
-# Yabai
-mkdir -p "$CONFIG_DIR/yabai"
-ln -sf "$DOTFILES_DIR/dotfiles/yabai/yabairc" "$CONFIG_DIR/yabai/yabairc"
-
-# SKHD
-mkdir -p "$CONFIG_DIR/skhd"
-ln -sf "$DOTFILES_DIR/dotfiles/skhd/skhdrc" "$CONFIG_DIR/skhd/skhdrc"
+# AeroSpace
+mkdir -p "$CONFIG_DIR/aerospace"
+ln -sf "$DOTFILES_DIR/dotfiles/aerospace/aerospace.toml" "$CONFIG_DIR/aerospace/aerospace.toml"
 
 # Ghostty
 mkdir -p "$CONFIG_DIR/ghostty"
@@ -59,11 +55,10 @@ if [ -d "$VSCODE_USER_DIR" ]; then
     ln -sf "$DOTFILES_DIR/.vscode/settings.json" "$VSCODE_USER_DIR/settings.json"
 fi
 
-# 5. Service Management (Yabai/SKHD)
+# 5. Service Management
 echo "Starting services..."
-yabai --start-service
-skhd --start-service
+echo "AeroSpace starts automatically at login (configured in aerospace.toml)."
+echo "To start now, open AeroSpace from Applications."
 
-echo "Done! Note: You may need to enable Accessibility permissions for Yabai and SKHD in System Settings."
-echo "For Yabai scripting additions (required for some features), you need to disable SIP. See Yabai wiki."
+echo "Done! Note: You may need to grant Accessibility permissions for AeroSpace in System Settings."
 

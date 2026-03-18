@@ -9,7 +9,6 @@ else
 fi
 
 # Taps
-brew tap koekeishiya/formulae # for yabai and skhd
 # brew tap homebrew/cask-fonts # Deprecated, fonts are now in main cask
 
 # Core tools
@@ -25,9 +24,8 @@ brew install eza # modern ls replacement
 brew install lazygit # terminal git UI
 brew install tmux # terminal multiplexer
 
-# Tiling & Keybindings
-brew install yabai
-brew install skhd
+# Tiling Window Manager
+brew install --cask nikitabobko/tap/aerospace
 
 # Applications
 brew install --cask discord
