@@ -13,9 +13,13 @@ chmod +x "$DOTFILES_DIR/scripts/install_brew.sh"
 # 2. Symlink Configs
 echo "Linking configurations..."
 
-# AeroSpace
-mkdir -p "$CONFIG_DIR/aerospace"
-ln -sf "$DOTFILES_DIR/dotfiles/aerospace/aerospace.toml" "$CONFIG_DIR/aerospace/aerospace.toml"
+# Yabai
+mkdir -p "$CONFIG_DIR/yabai"
+ln -sf "$DOTFILES_DIR/dotfiles/yabai/yabairc" "$CONFIG_DIR/yabai/yabairc"
+
+# SKHD
+mkdir -p "$CONFIG_DIR/skhd"
+ln -sf "$DOTFILES_DIR/dotfiles/skhd/skhdrc" "$CONFIG_DIR/skhd/skhdrc"
 
 # Ghostty
 mkdir -p "$CONFIG_DIR/ghostty"
@@ -31,20 +35,17 @@ mkdir -p "$CONFIG_DIR/tmux"
 ln -sf "$DOTFILES_DIR/dotfiles/tmux/tmux.conf" "$CONFIG_DIR/tmux/tmux.conf"
 
 # Shell Aliases (Add to .zshrc if not present)
-if ! grep -q "source $DOTFILES_DIR/dotfiles/zshrc_extras" "$HOME/.zshrc"; then
-    echo "Adding aliases to .zshrc..."
+if ! grep -q "source $DOTFILES_DIR/dotfiles/zshrc_custom" "$HOME/.zshrc"; then
+    echo "Adding shell customizations to .zshrc..."
     echo "" >> "$HOME/.zshrc"
-    echo "# Dotfiles extras" >> "$HOME/.zshrc"
-    echo "source \"$DOTFILES_DIR/dotfiles/zshrc_extras\"" >> "$HOME/.zshrc"
+    echo "# Dotfiles custom shell config" >> "$HOME/.zshrc"
+    echo "source \"$DOTFILES_DIR/dotfiles/zshrc_custom\"" >> "$HOME/.zshrc"
 fi
 
-# 3. Setup Neovim (LazyVim)
-echo "Setting up Neovim (LazyVim)..."
-if [ -d "$CONFIG_DIR/nvim" ]; then
-    echo "Backing up existing nvim config..."
-    mv "$CONFIG_DIR/nvim" "$CONFIG_DIR/nvim.bak"
-fi
-ln -sf "$DOTFILES_DIR/dotfiles/nvim" "$CONFIG_DIR/nvim"
+# 3. Setup Neovim
+echo "Setting up Neovim..."
+chmod +x "$DOTFILES_DIR/scripts/nvim.sh"
+./scripts/nvim.sh
 
 # 4. Setup VS Code Settings
 echo "Setting up VS Code settings..."
@@ -55,10 +56,10 @@ if [ -d "$VSCODE_USER_DIR" ]; then
     ln -sf "$DOTFILES_DIR/.vscode/settings.json" "$VSCODE_USER_DIR/settings.json"
 fi
 
-# 5. Service Management
+# 5. Service Management (Yabai/SKHD)
 echo "Starting services..."
-echo "AeroSpace starts automatically at login (configured in aerospace.toml)."
-echo "To start now, open AeroSpace from Applications."
+yabai --start-service
+skhd --start-service
 
-echo "Done! Note: You may need to grant Accessibility permissions for AeroSpace in System Settings."
-
+echo "Done! Note: You may need to enable Accessibility permissions for Yabai and SKHD in System Settings."
+echo "For Yabai scripting additions (required for some features), you need to disable SIP. See Yabai wiki."
